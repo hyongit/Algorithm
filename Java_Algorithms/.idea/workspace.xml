@@ -2,30 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e4765a5-5664-4e15-8b3a-1af158fc096c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../BOJ/Python_BOJ/1085.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BOJ/Python_BOJ/1100.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BOJ/Python_BOJ/1157.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Greedy/Python_Greedy/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Greedy/Python_Greedy/.idea/Greedy.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Greedy/Python_Greedy/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Greedy/Python_Greedy/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Greedy/Python_Greedy/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Greedy/Python_Greedy/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Greedy/Python_Greedy/p311.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Greedy/Python_Greedy/p312.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Greedy/Python_Greedy/p99.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Implementation/Python_Implementation/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Implementation/Python_Implementation/.idea/Implementation.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Implementation/Python_Implementation/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Implementation/Python_Implementation/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Implementation/Python_Implementation/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Implementation/Python_Implementation/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Implementation/Python_Implementation/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Implementation/Python_Implementation/p111.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Implementation/Python_Implementation/p113.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Implementation/Python_Implementation/p115.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Implementation/Python_Implementation/p322.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Implementation/Python_Implementation/recursive_function.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,20 +19,38 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="23mlIKR1enPkzlLmFJHEK02VzGl" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.MyStack">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Java_Algorithms" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MyQueue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MyQueue" />
       <module name="Java_Algorithms" />
@@ -64,8 +58,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MyStack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MyStack" />
+      <module name="Java_Algorithms" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MyStack" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.MyQueue" />
       </list>
     </recent_temporary>
