@@ -73,16 +73,56 @@ public class DoubleLinkedList<T> {
         }
     }
 
+    public boolean insertToFront(T existedData, T addData) {
+        if(this.head == null) { //head가 없을 경우
+            this.head = new Node<T>(addData);
+            this.tail = this.head;
+            return true;
+        } else if (this.head.data == existedData) { //head가 내가 찾는 node일 경우
+            Node<T> newHead = new Node<T>(addData);
+            newHead.next = this.head;
+            this.head = newHead;
+            return true;
+        } else { //head 외에 나머지 데이터가 내가 찾는 node
+            Node<T> node = this.head;
+            while (node != null) {
+                if(node.data == existedData) {
+                    Node<T> nodePrev = node.prev; // node.prev가 가리키는 아이 (전노드)를 변수에 넣어 놈
+                    //nodePrev.next가 새로 생성한 노드임 !
+                    nodePrev.next = new Node<T>(addData);
+                    nodePrev.next.next = node;
+
+                    nodePrev.next.prev = nodePrev;
+                    node.prev = nodePrev.next;
+                    return true;
+                } else {
+                    node = node.next;
+                }
+            }
+            return false;
+        }
+    }
+
     public static void main(String[] args) {
         DoubleLinkedList<Integer> MyLinkedList = new DoubleLinkedList<Integer>();
+        MyLinkedList.addNode(1);
         MyLinkedList.addNode(2);
+        MyLinkedList.addNode(3);
         MyLinkedList.addNode(4);
         MyLinkedList.addNode(5);
-        MyLinkedList.addNode(8);
-        MyLinkedList.addNode(3);
-
         MyLinkedList.printAll();
-        System.out.println(MyLinkedList.searchFromHead(2)); // 2
-        System.out.println(MyLinkedList.searchFromTail(2)); // 2
+        System.out.println("-----------------");
+
+        MyLinkedList.insertToFront(3,2);
+        MyLinkedList.printAll();
+        System.out.println("-----------------");
+
+        MyLinkedList.insertToFront(6,2);
+        MyLinkedList.insertToFront(1,0);
+        MyLinkedList.printAll();
+        System.out.println("-----------------");
+
+        MyLinkedList.addNode(6);
+        MyLinkedList.printAll();
     }
 }
