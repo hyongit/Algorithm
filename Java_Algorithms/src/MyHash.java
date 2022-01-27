@@ -1,6 +1,7 @@
 import java.util.*;
 import java.io.*;
 
+//Open Hash
 public class MyHash {
     public Slot[] hashTable;
 
