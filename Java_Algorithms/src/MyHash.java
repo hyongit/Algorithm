@@ -23,8 +23,7 @@ public class MyHash {
     // Division 기법을 사용하여 Key에 대한 주소 계산.
     // Division : 가장 간단한 해쉬 함수 중 하나로 나누기의 나머지 값을 사용
     public Integer hashFunc(String key) {
-        String name = "DaveLee";
-        return (int)(name.charAt(0)) % this.hashTable.length;
+        return (int)(key.charAt(0)) % this.hashTable.length;
     }
 
     public boolean saveData(String key, String value) {
