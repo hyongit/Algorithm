@@ -11,10 +11,14 @@ public class MyHash {
 
     //내부 클래스
     public class Slot {
+        String key;
         String value;
+        Slot next; //링크드 리스트 포인터
         //생성자
-        Slot(String value){
-            this.value=  value;
+        Slot(String key, String value){
+            this.key = key;
+            this.value = value;
+            this.next = null;
         }
     }
     
@@ -28,10 +32,25 @@ public class MyHash {
 
     public boolean saveData(String key, String value) {
         Integer address = this.hashFunc(key); // 해당 객체를 저장하는 주소 가져옴
-        if(this.hashTable[address] != null) { // 데이터가 저장 되어 있다면
-            this.hashTable[address].value = value; // value값만 바꿔줌
+        if(this.hashTable[address] != null) { // 앞 글자 똑같아서 충돌 발생!
+            // 링크드리스트 헤드
+            Slot findSlot = this.hashTable[address];
+            Slot prevSlot = this.hashTable[address];
+
+            while (findSlot != null) {
+                // 내가 원하는 key에 해당하는 Slot이 있는 경우 값 변경만 해주면 됨
+                if (findSlot.key == key) {
+                    findSlot.value = value;
+                    return true;
+                } else { // 그렇지 않다면 순회!
+                    prevSlot = findSlot;
+                    findSlot = findSlot.next;
+                }
+            }
+            prevSlot.next = new Slot(key, value);
+
         } else {
-            this.hashTable[address] = new Slot(value); // 해당 address에 Slot 객체 없다면
+            this.hashTable[address] = new Slot(key, value); // 해당 key, address에 Slot 객체 없다면
         }
         return true;
     }
@@ -39,7 +58,15 @@ public class MyHash {
     public String getData(String key) {
         Integer address = this.hashFunc(key);
         if(this.hashTable[address] != null) { // 해당 address에 객체 있다!
-            return this.hashTable[address].value;
+            Slot findSlot = this.hashTable[address]; //헤드
+            while (findSlot != null) {
+                if(findSlot.key == key) {
+                    return findSlot.value;
+                } else {
+                    findSlot = findSlot.next;
+                }
+            }
+            return null;
         } else {
             return null;
         }
@@ -49,7 +76,9 @@ public class MyHash {
         MyHash mainObject = new MyHash(20);
         mainObject.saveData("DaveLee", "01022223333");
         mainObject.saveData("fun-coding", "01033334444");
-        System.out.println(mainObject.getData("DaveLee"));
+        mainObject.saveData("David", "01044445555");
+        mainObject.saveData("Dave", "01055556666");
+        System.out.println(mainObject.getData("Dave"));
     }
 
 }
