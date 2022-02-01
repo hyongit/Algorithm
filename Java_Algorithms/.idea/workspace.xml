@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3e4765a5-5664-4e15-8b3a-1af158fc096c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyHash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyHash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +51,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
   </component>
-  <component name="RunManager" selected="Application.MyHash">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="BOJ_15651" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BOJ_15651" />
       <module name="Java_Algorithms" />
@@ -89,8 +89,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MyHash" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.MyHash" />
         <item itemvalue="Application.BOJ_15651" />
         <item itemvalue="Application.DoubleLinkedList" />
         <item itemvalue="Application.SingleLinkedList" />
