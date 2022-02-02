@@ -21,6 +21,7 @@ new_tmp = sorted(tmp)[::-1]
 
 for j in range(len(new_tmp)):
     answer.append(tmp.index(new_tmp[j]) + 1)
-    tmp[tmp.index(new_tmp[j])] = 2 # 원소를 2로 바꿔줌으로써 중복 방지 !
+    # 원소를 2로 바꿔줌으로써 중복 방지 !, 인덱스 적은 순으로 바꿔줌
+    tmp[tmp.index(new_tmp[j])] = 2
 
 print(answer)
