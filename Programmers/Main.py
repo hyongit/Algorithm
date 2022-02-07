@@ -1,25 +1,16 @@
-s = "one4seveneight"
+import sys
 
-word = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven',
-        'eight', 'nine']
+n = int(input())
+data_list = []
 
-nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+for _ in range(n):
+    data_list.append(sys.stdin.readline().strip())
 
-tmp = ""
-answer = ""
+#중복 제거
+data_list = list(set(data_list))
 
-for i in s:
-    tmp += i
+data_list.sort() #data_list 알파벳 순으로 정렬
+data_list.sort(key=lambda x: len(x))
 
-    if tmp in word:
-        answer += str(word.index(tmp))
-        tmp = ""
-
-    elif tmp in nums:
-        answer += i
-        tmp = ""
-
-    else:
-        pass
-
-print(int(answer))
+for i in data_list:
+    print(i)

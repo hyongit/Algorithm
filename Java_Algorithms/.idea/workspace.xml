@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="3e4765a5-5664-4e15-8b3a-1af158fc096c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_Algorithms/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_Algorithms/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java_Algorithms/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java_Algorithms/Node.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Node.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Programmers/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Programmers/Main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +55,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.NodeMgmt">
     <configuration name="BOJ_15651" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BOJ_15651" />
       <module name="Java_Algorithms" />
@@ -80,8 +84,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SingleLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SingleLinkedList" />
+    <configuration name="NodeMgmt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="NodeMgmt" />
       <module name="Java_Algorithms" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -89,11 +93,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.NodeMgmt" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.MyHash" />
         <item itemvalue="Application.BOJ_15651" />
         <item itemvalue="Application.DoubleLinkedList" />
-        <item itemvalue="Application.SingleLinkedList" />
       </list>
     </recent_temporary>
   </component>
