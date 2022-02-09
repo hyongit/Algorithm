@@ -1,13 +1,19 @@
-import java.io.*;
 import java.util.*;
+import java.io.*;
 
-
-public class Main{
+public class Main {
     public static void main(String[] args) {
-        String str = "바나나 : 1000원, 사과 : 2000원, 배 : 3000원";
-        String target = "사과";
-        int target_num = str.indexOf(target); // 13
-        String result = str.substring(target_num, (str.substring(target_num).indexOf("원")+target_num)); // 13 ~ 9+13(22)
-        System.out.println(result);
+        ArrayList<Integer> dataList = new ArrayList<Integer>();
+        dataList.add(9);
+        dataList.add(2);
+        dataList.add(4);
+
+        for(int i = 0; i<dataList.size()-1; i++) {
+            if(dataList.get(i) > dataList.get(i+1)) {
+                // Collections.swap(ArrayList명, swap할 idx, swap할 idx)
+                Collections.swap(dataList, i, i+1);
+            }
+        }
+        System.out.println(dataList);
     }
 }
