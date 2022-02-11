@@ -51,9 +51,9 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
   </component>
-  <component name="RunManager" selected="Application.BubbleSort">
-    <configuration name="BOJ_15651" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BOJ_15651" />
+  <component name="RunManager" selected="Application.BOJ_10825">
+    <configuration name="BOJ_10825" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BOJ_10825" />
       <module name="Java_Algorithms" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -89,11 +89,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BubbleSort" />
+        <item itemvalue="Application.BOJ_10825" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.BubbleSort" />
         <item itemvalue="Application.NodeMgmt" />
         <item itemvalue="Application.MyHash" />
-        <item itemvalue="Application.BOJ_15651" />
       </list>
     </recent_temporary>
   </component>
