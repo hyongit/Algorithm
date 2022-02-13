@@ -1,4 +1,4 @@
-# DFS, 깊이 우선 탐색, 스택 사용
+# DFS, 깊이 우선 탐색, 스택, 재귀 사용
 # 1. 탐색 시작 노드를 스택에 삽입하고 방문 처리 함
 # 2. 스택의 최상단 노드에 방문하지 않은 인접 노드가 있으면 그 인접 노드를 스택에 넣고 방문 처리
 # 방문하지 않은 인접 노드가 없으면 스택에서 최상단 노드를 꺼냄
@@ -7,9 +7,9 @@
 # DFS 메서드 정의
 def dfs(graph, v, visited):
     visited[v] = True
-    print(v, end=' ')
+    print(v, end = ' ')
     for i in graph[v]:
-        if not visited[i]: # if visited[i] == False
+        if visited[i] == False:
             dfs(graph, i, visited)
 
 graph = [
@@ -25,7 +25,6 @@ graph = [
 ]
 
 #각 노드가 방문된 정보를 표현
-visited = [False]*9
-
+visited = [False] * 9
 #정의된 DFS 함수 호출
-dfs(graph, 1, visited)
+dfs(graph,1,visited)

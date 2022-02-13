@@ -8,14 +8,15 @@ from collections import deque
 #BFS 메서드 정의
 def bfs(graph, start, visited):
     # 시작 노드를 큐에 삽입
-    queue = deque([start])
+    queue = deque()
+    queue.append(start)
     visited[start] = True
-    #큐가 빌 때까지 반복
+
     while queue:
-        v = queue.popleft()
-        print(v, end=' ')
-        for i in graph[v]:
-            if not visited[i]:
+        n = queue.popleft()
+        print(n, end =' ')
+        for i in graph[n]:
+            if visited[i] == False:
                 queue.append(i)
                 visited[i] = True
 
