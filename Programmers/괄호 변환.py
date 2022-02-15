@@ -1,3 +1,4 @@
+# 재귀함수 사용
 # 2
 def partition(k):
     tmp_u = ''
