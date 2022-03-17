@@ -34,7 +34,7 @@ def dijkstra(start):
     #시작 노드에 대해서 초기화
     distance[start] = 0
     visited[start] = True
-    #print(graph)
+    print(graph)
     for j in graph[start]:
         #print("j[0]", j[0])
         distance[j[0]] = j[1]
@@ -47,7 +47,7 @@ def dijkstra(start):
         #print(visited)
         #현재 노드와 연결된 다른 노드를 확인
         for j in graph[now]:
-            cost = distance[now] + j[1]
+            cost = distance[now] + j[1] # 거쳐서 가는 거리 = 현재 거리 + 갈 수 있는 노드 거리
             #현재 노드를 거쳐서 다른 노드로 이동하는 거리가 더 짧은 경우
             if cost < distance[j[0]]:
                 distance[j[0]] = cost
