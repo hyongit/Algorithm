@@ -1,3 +1,6 @@
+# 백준 [연산자 끼워넣기]
+# DFS, 브루트포스
+
 n = int(input())
 nums = list(map(int, input().split()))
 plus, minus, mul, div = list(map(int, input().split()))
