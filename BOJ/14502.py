@@ -1,5 +1,7 @@
 # 백준 [연구소]
 # BFS
+# 재귀로 벽 세우는 모든 경우의 수 파악
+# bfs로 바이러스 퍼뜨린 후 안전구역 세고 최댓값 저장
 
 import sys
 from collections import deque
