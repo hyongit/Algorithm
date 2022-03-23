@@ -1,3 +1,5 @@
+# 백준 [톱니바퀴]
+
 from collections import deque
 
 #rotate 함수 써야하므로 deque 4개 받음

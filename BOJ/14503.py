@@ -1,3 +1,5 @@
+# 백준 [로봇 청소기]
+
 n, m = map(int, input().split())
 
 visited = [[0] * m for _ in range(n)] # 청소 여부
