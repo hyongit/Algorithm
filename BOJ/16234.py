@@ -1,7 +1,10 @@
 # 백준 [인구이동]
 # bfs, 시뮬레이션
+import sys
 import math
 from collections import deque
+
+input = sys.stdin.readline
 
 # 남 동 북 서
 dx = [1, 0, -1, 0]
