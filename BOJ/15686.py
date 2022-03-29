@@ -1,10 +1,13 @@
+# 백준 [치킨 거리]
+# 시뮬레이션
+
 from itertools import combinations
 
-n, m = map(int, input().split())
-maps = [list(map(int, input().split())) for _ in range(n)]
+# n, m = map(int, input().split())
+# maps = [list(map(int, input().split())) for _ in range(n)]
 
-# n, m = 5, 1
-# maps = [[1, 2, 0, 0, 0], [1, 2, 0, 0, 0], [1, 2, 0, 0, 0], [1, 2, 0, 0, 0], [1, 2, 0, 0, 0]]
+n, m = 5, 2
+maps = [[0, 2, 0, 1, 0], [1, 0, 1, 0, 0], [0, 0, 0, 0, 0], [2, 0, 0, 1, 1], [2, 2, 0, 1, 2]]
 
 home_loca = []
 chic_loca = []
@@ -23,10 +26,15 @@ for i in range(n):
 
 for i in combinations(chic_loca, m):
     tmp = 0
-    tmp_arr = []
+    tmp_arr2 = []
+    #print(i)
     for j in range(len(home_loca)):
-        tmp = abs(home_loca[j][0] - i[0][0]) + abs(home_loca[j][1] - i[0][1])
-        tmp_arr.append(tmp)
-    answer = min(answer, sum(tmp_arr))
+        tmp_arr = []
+        for k in range(len(i)):
+            tmp = abs(home_loca[j][0] - i[k][0]) + abs(home_loca[j][1] - i[k][1])
+            tmp_arr.append(tmp)
+        tmp_arr2.append(min(tmp_arr))
+    #print(sum(tmp_arr2))
+    answer = min(answer, sum(tmp_arr2))
 
 print(answer)
