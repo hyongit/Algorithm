@@ -2,6 +2,7 @@
 # 시뮬레이션
 
 from itertools import combinations
+from xml.dom import minicompat
 
 # n, m = map(int, input().split())
 # maps = [list(map(int, input().split())) for _ in range(n)]
@@ -9,32 +10,31 @@ from itertools import combinations
 n, m = 5, 2
 maps = [[0, 2, 0, 1, 0], [1, 0, 1, 0, 0], [0, 0, 0, 0, 0], [2, 0, 0, 1, 1], [2, 2, 0, 1, 2]]
 
+# 집 위치, 치킨 집 위치 저장
 home_loca = []
 chic_loca = []
 
-answer = int(1e9)
+min_loca = int(1e9)
 
 for i in range(n):
     for j in range(n):
-        if maps[i][j] == 1:
-            home_loca.append([i, j])
-        if maps[i][j] == 2:
-            chic_loca.append([i, j])
-
-# print(home_loca)
-# print(chic_loca)
+        if maps[i][j] == 1 :
+            home_loca.append([i+1, j+1])
+        elif maps[i][j] == 2 :
+            chic_loca.append([i+1, j+1])
 
 for i in combinations(chic_loca, m):
     tmp = 0
-    tmp_arr2 = []
-    #print(i)
-    for j in range(len(home_loca)):
-        tmp_arr = []
-        for k in range(len(i)):
-            tmp = abs(home_loca[j][0] - i[k][0]) + abs(home_loca[j][1] - i[k][1])
-            tmp_arr.append(tmp)
-        tmp_arr2.append(min(tmp_arr))
-    #print(sum(tmp_arr2))
-    answer = min(answer, sum(tmp_arr2))
+    result_loca = []
 
-print(answer)
+    for j in range(len(home_loca)):
+        a, b = home_loca[j][0], home_loca[j][1]
+        tmp_loca = []
+        for k in range(len(i)):
+            r, c = i[k][0], i[k][1]
+            tmp = abs(a - r) + abs(b - c)
+            tmp_loca.append(tmp)
+        result_loca.append(min(tmp_loca))
+    min_loca = min(min_loca, sum(result_loca))
+
+print(min_loca)
