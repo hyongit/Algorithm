@@ -1,21 +1,21 @@
 # 백준 [제로]
 # 구현
 import sys
-
 input = sys.stdin.readline
 
-n = int(input())
-k = []
-stack = []
+k = int(input())
+stk = []
+answer = []
 
-for _ in range(n):
-    tmp = int(input())
-    k.append(tmp)
+for _ in range(k):
+    n = int(input())
+    stk.append(n)
 
-for i in k:
+# i가 0이 아니면 append하고 0이면 pop
+for i in stk:
     if i == 0:
-        stack.pop()
+        answer.pop()
     else:
-        stack.append(i)
+        answer.append(i)
 
-print(sum(stack))
+print(sum(answer))

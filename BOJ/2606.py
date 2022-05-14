@@ -3,29 +3,26 @@
 
 n = int(input())
 m = int(input())
-
-graph = [[] for _ in range(n+1)]
-visited = [0] * (n+1)
-answer = 0
+maps = [[] for _ in range(n+1)]
 
 for i in range(m):
     a, b = map(int, input().split())
-    graph[a].append(b)
-    graph[b].append(a)
+    maps[a].append(b)
+    maps[b].append(a)
 
-for i in graph:
-    i.sort()
-    
+visited = [False] * (n+1)
+answer = 0
+
 def dfs(num):
     global answer
-    
-    if visited[num] == 0:
-        visited[num] = 1
-        #print(num)
 
-    for i in graph[num]:
-        if visited[i] == 0:
+    visited[num] = True
+
+    for i in range(len(maps[num])):
+        if visited[maps[num][i]] == False:
+            dfs(maps[num][i])
             answer += 1
-            dfs(i)
+            
+
 dfs(1)
 print(answer)
