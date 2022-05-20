@@ -3,7 +3,7 @@
 # 나누기 주의
 
 n = int(input())
-nums = list(map(int, input().split()))
+arr = list(map(int, input().split()))
 plus, minus, mul, div = map(int, input().split())
 
 # n = 6
@@ -12,29 +12,24 @@ plus, minus, mul, div = map(int, input().split())
 
 max_num = int(-1e9)
 min_num = int(1e9)
-idx = 0
 
-def dfs(num, idx, plus, minus, mul, div):
+def recur(num, idx, plus, minus, mul, div):
     global max_num, min_num
-
-    #print(num, idx)
 
     if idx == n-1:
         max_num = max(max_num, num)
         min_num = min(min_num, num)
 
     if plus > 0:
-        dfs(num + nums[idx+1], idx + 1, plus-1, minus, mul, div)
-
+        recur(num + arr[idx+1], idx+1, plus-1, minus, mul, div)
     if minus > 0:
-        dfs(num - nums[idx+1], idx + 1, plus, minus-1, mul, div)
-    
+        recur(num - arr[idx+1], idx+1, plus, minus-1, mul, div)
     if mul > 0:
-        dfs(num * nums[idx+1], idx + 1, plus, minus, mul-1, div)
-    
+        recur(num * arr[idx+1], idx+1, plus, minus, mul-1, div)
     if div > 0:
-        dfs(int(num / nums[idx+1]), idx + 1, plus, minus, mul, div-1)
+        recur(int(num / arr[idx+1]), idx+1, plus, minus, mul, div-1)
 
-dfs(nums[0], 0, plus, minus, mul, div)
+recur(arr[0], 0, plus, minus, mul, div)
+
 print(max_num)
 print(min_num)
