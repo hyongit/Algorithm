@@ -1,20 +1,19 @@
 # 백준 [ N과 M (4) ]
 # 백트래킹
 
-n, m = map(int, input().split())
-answer = []
+#n, m = map(int, input().split())
+n, m = 4, 2
+arr =[]
 
 def recur(num):
-    global k
 
-    if len(answer) == m:
-        print(' '.join(map(str, answer)))
+    if len(arr) == m:
+        print(' '.join(map(str, arr)))
         return
-
+    
     for i in range(num, n+1):
-        #print(num)
-        answer.append(i)
+        arr.append(i)
         recur(i)
-        answer.pop()
+        arr.pop()
 
 recur(1)
