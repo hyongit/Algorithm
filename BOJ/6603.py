@@ -1,38 +1,28 @@
 # 백준 [로또]
 # 백트래킹
 
-import sys
+def recur(num):
 
-input = sys.stdin.readline
-
-def recur(d, idx):
-    
-    if d == 6:
-        for i in range(6):
-            print(result[i], end=' ')
-        print()
+    if len(answer) == 6:
+        print(' '.join(map(str, answer)))
         return
 
-    for i in range(idx, n):
-        if nums[i] not in result:
-            result.append(nums[i])
-            recur(d+1, i+1)
-            result.pop()
+    for i in range(num, k):
+        answer.append(s[i])
+        recur(i+1)
+        answer.pop()
 
-# result = []
-# n = 8
-# nums = [1,2,3,5,8,13,21,34]
-# recur(0, 0)
 
 while True:
-
     nums = list(map(int, input().split()))
-    n = nums[0]
-    nums = nums[1:]
+    k = nums[0]
+    s = nums[1:]
+    s.sort()
 
-    if n == 0:
+    answer = []
+
+    if k == 0:
         break
 
-    result = []
-    recur(0, 0)
+    recur(0)
     print()
