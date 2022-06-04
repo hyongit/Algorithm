@@ -14,7 +14,7 @@ lq = deque()
 rq = deque()
 
 for i in range(m):
-    # 남
+    # 남학생
     if arr[i][0] == 1:
         for j in range(n):
             if (j+1) % arr[i][1] == 0:
@@ -23,7 +23,7 @@ for i in range(m):
                 else:
                     state[j] = 0
 
-    #여
+    #여학생
     if arr[i][0] == 2:
         num = arr[i][1]-1
         lq.append(num)
@@ -33,8 +33,8 @@ for i in range(m):
             x = lq.popleft()
             y = rq.popleft()
 
-            left = x-1 # 좌 2 idx : 1
-            right = y+1 # 우 4 idx : 3
+            left = x-1 
+            right = y+1
 
             if 0 <= left < n and 0 <= right < n and state[left] == state[right]:                
                 if state[left] == 0:
