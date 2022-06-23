@@ -20,11 +20,11 @@ def calc(lst):
         max_num = tmp
 
 
-# 순열 구하는 라이브러리
+# permutations로 순열 구하기
 # for i in permutations(nums, 6):
 #     print(i)
     
-    
+# 백트래킹으로 순열 구하기 
 def recur(d):
 
     if len(arr) == n:
