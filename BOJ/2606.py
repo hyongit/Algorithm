@@ -10,19 +10,22 @@ for i in range(m):
     maps[a].append(b)
     maps[b].append(a)
 
-visited = [False] * (n+1)
-answer = 0
+visited = [0] * (n+1)
+ans = 0
+
+visited[1] = 1
 
 def dfs(num):
-    global answer
-
-    visited[num] = True
-
-    for i in range(len(maps[num])):
-        if visited[maps[num][i]] == False:
-            dfs(maps[num][i])
-            answer += 1
+    for i in maps[num]:
+        if visited[i] == 0:
+            visited[i] = 1
+            dfs(i)
             
-
 dfs(1)
-print(answer)
+
+# [0, 1, 1, 1, 0, 1, 1, 0]
+for i in range(2, n+1):
+    if visited[i] == 1:
+        ans += 1
+
+print(ans)

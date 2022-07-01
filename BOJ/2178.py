@@ -18,7 +18,7 @@ for i in arr:
 dx = [1, -1, 0, 0]
 dy = [0, 0, 1, -1]
 
-def dfs():
+def bfs():
     x, y = 0, 0
     q = deque()
     q.append([x, y])
@@ -39,4 +39,4 @@ def dfs():
     #     print(i)
     return maps[n-1][m-1]
 
-print(dfs())
+print(bfs())
