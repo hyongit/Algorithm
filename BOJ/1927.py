@@ -1,4 +1,4 @@
-# [백준] 최소힙
+# [백준] 최소 힙
 # 우선순위 큐
 
 from queue import PriorityQueue
