@@ -1,1 +1,22 @@
 # [프로그래머스] JadenCase 문자열 만들기
+
+s = 'for  the last week'
+
+s = s.lower()
+strs = s.split(' ')
+
+answer = []
+
+for i in strs:
+    if i == '':
+        answer.append(i)
+        
+    elif i[0].isalpha():
+        i = i[0].upper() + i[1:]
+        answer.append(i)
+    
+    else:
+        answer.append(i)
+
+
+print(' '.join(answer))
