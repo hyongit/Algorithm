@@ -2,28 +2,24 @@
 # while문 쓰면 시간초과, 사칙연산으로 풀기
 
 n = int(input())
-a = list(map(int, input().split()))
+tmp_arr = map(int, input().split())
+arr = []
+for a in tmp_arr:
+    arr.append(a)
 b, c = map(int, input().split())
 
-# n = 3
-# a = [3, 4, 5]
-# b, c = 2, 2
+total = 0
 
-answer = 0
+for j in arr:
+    j -= b
+    total += 1
 
-for i in range(n):
-    a[i] -= b
-    answer += 1
-
-    if a[i] > 0:
-        if a[i] >= c:
-            if a[i] % c == 0:
-                answer += (a[i] // c)
-            else:
-                answer += (a[i] // c) + 1
-                
+    if j > 0:
+        if j % c == 0:
+            total += j//c
         else:
-            answer += 1
-    
-    
-print(answer)
+            total += (j//c + 1)
+    else:
+        continue
+
+print(total)

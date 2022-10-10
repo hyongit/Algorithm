@@ -3,33 +3,32 @@
 # 나누기 주의
 
 n = int(input())
-arr = list(map(int, input().split()))
-plus, minus, mul, div = map(int, input().split())
+nums = list(map(int, input().split()))
 
-# n = 6
-# nums = [1, 2, 3, 4, 5, 6]
-# plus, minus, mul, div = 2, 1, 1, 1
+plus, minus, mult, div = map(int, input().split())
 
 max_num = int(-1e9)
 min_num = int(1e9)
 
-def recur(num, idx, plus, minus, mul, div):
+def recur(plus, minus, mult, div, num, idx):
     global max_num, min_num
 
-    if idx == n-1:
+    if idx == len(nums)-1:
         max_num = max(max_num, num)
         min_num = min(min_num, num)
 
     if plus > 0:
-        recur(num + arr[idx+1], idx+1, plus-1, minus, mul, div)
+        recur(plus-1, minus, mult, div, num + nums[idx+1], idx+1)
+    
     if minus > 0:
-        recur(num - arr[idx+1], idx+1, plus, minus-1, mul, div)
-    if mul > 0:
-        recur(num * arr[idx+1], idx+1, plus, minus, mul-1, div)
+        recur(plus, minus-1, mult, div, num - nums[idx+1], idx+1)
+
+    if mult > 0:
+        recur(plus, minus, mult-1, div, num * nums[idx+1], idx+1)
+    
     if div > 0:
-        recur(int(num / arr[idx+1]), idx+1, plus, minus, mul, div-1)
+        recur(plus, minus, mult, div-1, int(num / nums[idx+1]), idx+1)
 
-recur(arr[0], 0, plus, minus, mul, div)
-
+recur(plus, minus, mult, div, nums[0], 0)
 print(max_num)
 print(min_num)
